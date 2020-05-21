@@ -30,8 +30,8 @@ usReportPeriod <- as.Date(unitedStatesCovid$date)
 plot(x = chinaCovid$total_deaths_per_million,
      y = chinaCovid$new_cases_per_million,
      main = paste("China Daily New vs Total Deaths Per Million from", min(chinaReportPeriod), "to", max(chinaReportPeriod)),
-     xlab = "US Total Deaths Per Million",
-     ylab = "US New Deaths Per Million",
+     xlab = "China Total Deaths Per Million",
+     ylab = "China New Deaths Per Million",
      type = "l")
 
 plot(x = unitedStatesCovid$total_deaths_per_million,
