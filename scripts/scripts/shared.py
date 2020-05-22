@@ -264,9 +264,7 @@ days_since_spec = {
 
 def _get_date_of_threshold(df, col, threshold):
     try:
-        df_gt_nth = df[df[col] >= threshold]
-        earliest = df.loc[pd.to_datetime(df_gt_nth['date']).idxmin()]
-        return earliest['date']
+        return df['date'][df[col] >= threshold].iloc[0]
     except:
         return None
 
